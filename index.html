@@ -4,170 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioLog — Сервис ежедневного мониторинга показателей здоровья</title>
-    <!-- Подключение Tailwind CSS для современного адаптивного дизайна -->
+    <!-- Подключение Tailwind CSS -->
     <script src="https://jsdelivr.net"></script>
+    <style>
+        /* Интеграция вашей кастомной палитры цветов */
+        .bg-custom-gradient {
+            background: linear-gradient(135deg, #CCF3FF 0%, #B9D6BE 100%);
+        }
+        .text-accent-primary { color: #FF7070; }
+        .text-accent-secondary { color: #DA5D35; }
+        .bg-accent-primary { background-color: #FF7070; }
+        .bg-accent-secondary { background-color: #DA5D35; }
+        .hover-bg-accent-secondary:hover { background-color: #C14E2B; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="bg-custom-gradient text-slate-800 font-sans antialiased min-h-screen py-8 px-4 sm:px-6">
 
-    <!-- 1. ПЕРВЫЙ ЭКРАН (HERO SECTION) -->
-    <header class="bg-gradient-to-br from-emerald-600 to-teal-700 text-white min-h-[85vh] flex flex-col justify-between py-6">
-        <nav class="container mx-auto px-6 flex justify-between items-center">
-            <span class="text-2xl font-bold tracking-tight">BioLog</span>
-            <span class="bg-emerald-500/30 px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm">Итоговый проект. Часть 1</span>
-        </nav>
-        
-        <div class="container mx-auto px-6 py-12 max-w-5xl my-auto grid md:grid-cols-2 gap-12 items-center text-left">
-            <div>
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
-                    BioLog — сервис ежедневного мониторинга показателей здоровья
-                </h1>
-                <p class="text-lg text-emerald-100 mb-10 leading-relaxed">
-                    Онлайн-контроль и автоматизация рутины для тех, кто следит или помогает следить за показателями сердечно-сосудистой системы, уровнем сахара, общим самочувствием и стабильностью приема лекарств.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#survey" class="bg-white text-teal-800 font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-emerald-50 transition transform hover:-translate-y-0.5 text-center">
-                        Пройти опрос проекта
-                    </a>
-                    <a href="#about" class="border border-white/40 bg-white/10 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/20 transition text-center backdrop-blur-sm">
-                        Подробнее
-                    </a>
+    <div class="max-w-4xl mx-auto space-y-8">
+
+        <!-- 1. ПЕРВЫЙ ЭКРАН (В ОТДЕЛЬНОЙ РАМОЧКЕ) -->
+        <header class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-md border border-white/50">
+            <nav class="flex justify-between items-center mb-8">
+                <span class="text-2xl font-black tracking-tight text-slate-900">BioLog</span>
+                <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-medium">Итоговый проект. Часть 1</span>
+            </nav>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-slate-900 leading-tight">
+                        BioLog — сервис ежедневного мониторинга показателей здоровья
+                    </h1>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                        Онлайн-контроль и автоматизация рутины для тех, кто следит или помогает следить за показателями сердечно-сосудистой системы, уровнем сахара, общим самочувствием и стабильностью приема лекарств.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <a href="#survey" class="bg-accent-secondary hover-bg-accent-secondary text-white font-bold px-6 py-3 rounded-xl shadow-xs transition transform hover:-translate-y-0.5 text-center text-sm">
+                            Пройти опрос проекта
+                        </a>
+                        <a href="#about" class="bg-slate-100 text-slate-700 font-medium px-6 py-3 rounded-xl hover:bg-slate-200 transition text-center text-sm">
+                            Подробнее
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Блок для вашего изображения image.png -->
-            <div class="flex justify-center">
-                <div class="bg-white/10 p-4 rounded-3xl backdrop-blur-xs border border-white/20 shadow-2xl max-w-sm w-full">
-                    <img src="image.png" alt="Интерфейс BioLog" class="rounded-2xl w-full h-auto object-cover fallback-bg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <!-- Заглушка на случай, если картинка еще не загружена в репозиторий -->
-                    <div class="hidden bg-teal-950/50 aspect-9/16 rounded-2xl flex-col items-center justify-center text-center p-6 border border-dashed border-white/30 text-emerald-200">
-                        <span class="text-4xl mb-2">📱</span>
-                        <span class="text-xs font-semibold">Экран прототипа BioLog</span>
-                        <span class="text-[10px] text-emerald-300/60 mt-1">(Загрузите файл image.png в ваш репозиторий)</span>
+                
+                <!-- Блок для изображения image.png -->
+                <div class="flex justify-center">
+                    <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 shadow-inner max-w-[260px] w-full">
+                        <img src="image.png" alt="Интерфейс BioLog" class="rounded-xl w-full h-auto object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="hidden bg-slate-200 aspect-9/16 rounded-xl flex-col items-center justify-center text-center p-4 text-slate-400">
+                            <span class="text-3xl mb-1">📱</span>
+                            <span class="text-[11px] font-semibold">Экран BioLog</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center text-emerald-200/60 text-sm">Скролл вниз для изучения проекта</div>
-    </header>
+        </header>
 
-    <!-- 2. О ПРОЕКТЕ -->
-    <section id="about" class="py-20 bg-white border-b border-slate-100">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <div class="text-center mb-10">
-                <span class="text-sm font-bold tracking-widest text-emerald-600 uppercase">Концепция</span>
-                <h2 class="text-3xl font-bold mt-2">Что такое BioLog?</h2>
-            </div>
-            <p class="text-slate-600 text-lg leading-relaxed mb-6 text-center">
+        <!-- 2. О ПРОЕКТЕ -->
+        <section id="about" class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-md border border-white/50 text-center">
+            <span class="text-xs font-bold tracking-widest text-accent-secondary uppercase">Концепция</span>
+            <h2 class="text-2xl font-bold mt-1 mb-4 text-slate-900">Что такое BioLog?</h2>
+            <p class="text-slate-600 text-sm leading-relaxed max-w-2xl mx-auto mb-4">
                 Это специализированное мобильное приложение, созданное для автоматизации контроля за важнейшими показателями здоровья. 
             </p>
-            <p class="text-slate-600 text-lg leading-relaxed text-center">
+            <p class="text-slate-600 text-sm leading-relaxed max-w-2xl mx-auto">
                 Продукт ориентирован на людей старше 35 лет или находящихся в группе риска (наследственность, избыточный вес, курение), а также на их близких, помогающих удаленно координировать процесс лечения.
             </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- 3. ПРОБЛЕМА -->
-    <section class="py-20 bg-slate-50">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-16">
-                <span class="text-sm font-bold tracking-widest text-red-500 uppercase">Реальные боли</span>
-                <h2 class="text-3xl font-bold mt-2">Проблемы, которые решает проект</h2>
+        <!-- 3. ПРОБЛЕМА -->
+        <section class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-md border border-white/50">
+            <div class="text-center mb-6">
+                <span class="text-xs font-bold tracking-widest bg-red-50 text-accent-primary px-2.5 py-1 rounded-full uppercase">Реальные боли</span>
+                <h2 class="text-2xl font-bold mt-2 text-slate-900">Проблемы, которые решает проект</h2>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-bold text-xl mb-6">⏰</div>
-                    <h3 class="text-xl font-bold mb-3">Забывчивость</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Люди регулярно пропускают прием назначенных лекарств или своевременную проверку артериального давления.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="bg-slate-50/50 p-5 rounded-xl border border-slate-100">
+                    <div class="text-xl mb-2">⏰</div>
+                    <h3 class="font-bold text-sm text-slate-900 mb-1">Забывчивость</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Люди регулярно пропускают прием назначенных лекарств или своевременную проверку артериального давления.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-bold text-xl mb-6">📑</div>
-                    <h3 class="text-xl font-bold mb-3">Хаос в данных</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Бумажные записи легко теряются или заполняются нерегулярно, из-за чего врачам крайне сложно проанализировать все показатели за месяц.</p>
+                <div class="bg-slate-50/50 p-5 rounded-xl border border-slate-100">
+                    <div class="text-xl mb-2">📑</div>
+                    <h3 class="font-bold text-sm text-slate-900 mb-1">Хаос в данных</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Бумажные записи легко теряются или заполняются нерегулярно, из-за чего врачам крайне сложно проанализировать все показатели за месяц.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                    <div class="w-12 h-12 bg-red-50 text-red-500 rounded-xl flex items-center justify-center font-bold text-xl mb-6">💔</div>
-                    <h3 class="text-xl font-bold mb-3">Тревога семьи</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed">Близкие не знают в реальном времени, выпил ли их родственник обязательные лекарства и всё ли у него в порядке с сердцем.</p>
+                <div class="bg-slate-50/50 p-5 rounded-xl border border-slate-100">
+                    <div class="text-xl mb-2">💔</div>
+                    <h3 class="font-bold text-sm text-slate-900 mb-1">Тревога семьи</h3>
+                    <p class="text-slate-500 text-xs leading-relaxed">Близкие не знают в реальном времени, выпил ли их родственник обязательные лекарства и всё ли у него в порядке с сердцем.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4. РЕШЕНИЕ -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-16">
-                <span class="text-sm font-bold tracking-widest text-emerald-600 uppercase">Решение</span>
-                <h2 class="text-3xl font-bold mt-2">Решение, которое предлагает BioLog</h2>
+        <!-- 4. РЕШЕНИЕ И ПОЧЕМУ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ -->
+        <section class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-md border border-white/50">
+            <div class="text-center mb-6">
+                <span class="text-xs font-bold tracking-widest text-accent-secondary uppercase">Решение</span>
+                <h2 class="text-2xl font-bold mt-1 text-slate-900">Решение, которое предлагает BioLog</h2>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-emerald-50/50 p-8 rounded-2xl border border-emerald-100">
-                    <div class="text-2xl mb-4">📊</div>
-                    <h4 class="font-bold text-slate-800 mb-2">Анализ данных</h4>
-                    <p class="text-sm text-slate-600">Запись давления и структурирование данных, которые дают точную и понятную статистику за последний период.</p>
+            <div class="grid md:grid-cols-3 gap-4 mb-6">
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-accent-secondary font-bold text-sm block mb-1">01. Анализ данных</span>
+                    <p class="text-slate-500 text-xs leading-relaxed">Запись давления и структурирование данных для точной статистики.</p>
                 </div>
-                <div class="bg-emerald-50/50 p-8 rounded-2xl border border-emerald-100">
-                    <div class="text-2xl mb-4">🔔</div>
-                    <h4 class="font-bold text-slate-800 mb-2">Дисциплина</h4>
-                    <p class="text-sm text-slate-600">Постоянные и своевременные напоминания о необходимости принять лекарства и проверить давление.</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-accent-secondary font-bold text-sm block mb-1">02. Дисциплина</span>
+                    <p class="text-slate-500 text-xs leading-relaxed">Постоянные и своевременные напоминания о медикаментах и замерах.</p>
                 </div>
-                <div class="bg-emerald-50/50 p-8 rounded-2xl border border-emerald-100">
-                    <div class="text-2xl mb-4">🛡️</div>
-                    <h4 class="font-bold text-slate-800 mb-2">Спокойствие семьи</h4>
-                    <p class="text-sm text-slate-600">Мгновенные автоматические уведомления для родственников о выполненной рутине и стабильном состоянии.</p>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <span class="text-accent-secondary font-bold text-sm block mb-1">03. Уведомления</span>
+                    <p class="text-slate-500 text-xs leading-relaxed">Автоматические отчеты для родственников о выполненной рутине.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 4.1 ПОЧЕМУ МОБИЛЬНОЕ ПРИЛОЖЕНИЕ (ДОПОЛНИТЕЛЬНЫЙ ФОКУС) -->
-    <section class="py-16 bg-teal-950 text-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-12">
-                <h3 class="text-2xl font-bold">Почему именно мобильное приложение?</h3>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
-                    <h4 class="font-bold text-emerald-400 mb-2">📍 Постоянный доступ</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        Телефон всегда под рукой. Замерить давление и сразу внесить его в телефон на даче, в гостях или в дороге — это всего одна минута времени, исключающая потерю данных.
-                    </p>
-                </div>
-                <div class="bg-white/5 p-6 rounded-xl border border-white/10">
-                    <h4 class="font-bold text-emerald-400 mb-2">⚡ Уведомления</h4>
-                    <p class="text-sm text-slate-300 leading-relaxed">
-                        Даже если телефон находится в кармане, системные push-уведомления способны гарантированно привлечь внимание. Они будут приходить в строго заданное врачом время.
-                    </p>
+            <div class="border-t border-slate-100 pt-6">
+                <h3 class="text-md font-bold text-slate-900 mb-3 text-center">Почему именно формат мобильного приложения?</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs">
+                        <strong class="text-slate-800 block mb-1">📍 Постоянный доступ</strong>
+                        Телефон всегда под рукой. Замерить давление и сразу внести его в телефон на даче, в гостях или в дороге — это всего одна минута времени.
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs">
+                        <strong class="text-slate-800 block mb-1">⚡ Уведомления</strong>
+                        Даже если телефон в pocket, push-уведомления способны привлечь внимание и напомнить о важном действии строго по расписанию.
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 5. ДЛЯ КОГО ПРОЕКТ -->
-    <section class="py-20 bg-slate-50">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="text-center mb-16">
-                <span class="text-sm font-bold tracking-widest text-emerald-600 uppercase">Целевая аудитория</span>
-                <h2 class="text-3xl font-bold mt-2">Для кого создается продукт?</h2>
+        <!-- 5. ДЛЯ КОГО ПРОЕКТ -->
+        <section class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-md border border-white/50">
+            <div class="text-center mb-6">
+                <span class="text-xs font-bold tracking-widest text-accent-secondary uppercase">Целевая аудитория</span>
+                <h2 class="text-2xl font-bold mt-1 text-slate-900">Для кого создается продукт?</h2>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                              <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100">
-                    <h4 class="font-bold text-teal-900 mb-2">Пациенты 35+</h4>
-                    <p class="text-xs text-slate-500">Люди, которые самостоятельно следят за стабильностью показателей и хотят автоматизировать ежедневную медицинскую рутину.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="border border-slate-100 p-4 rounded-xl bg-slate-50/30 text-xs">
+                    <h4 class="font-bold text-slate-900 mb-1">Пациенты 35+</h4>
+                    <p class="text-slate-500 leading-relaxed">Люди, самостоятельно контролирующие показатели и желающие упростить рутину.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100">
-                    <h4 class="font-bold text-teal-900 mb-2">Группы риска</h4>
-                    <p class="text-xs text-slate-500">Люди с избыточным весом, курением или наследственной предрасположенностью к сердечно-сосудистым заболеваниям.</p>
+                <div class="border border-slate-100 p-4 rounded-xl bg-slate-50/30
+                                        <h4 class="font-bold text-slate-900 mb-1">Группы риска</h4>
+                    <p class="text-slate-500 leading-relaxed">Люди с избыточным весом, курением или наследственной предрасположенностью.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100">
-                    <h4 class="font-bold text-teal-900 mb-2">Заботливые семьи</h4>
-                    <p class="text-xs text-slate-500">Родственники пожилых людей, помогающие контролировать график лечения и нуждающиеся в оперативном получении данных.</p>
+                <div class="border border-slate-100 p-4 rounded-xl bg-slate-50/30 text-xs">
+                    <h4 class="font-bold text-slate-900 mb-1">Заботливые семьи</h4>
+                    <p class="text-slate-500 leading-relaxed">Родственники пожилых людей, помогающие удаленно следить за ходом лечения.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 6. КЛЮЧЕВЫЕ ВОЗМОЖНОСТИ -->
-    <section class="py-20 bg-white">
+        <!-- 6. КЛЮЧЕВЫЕ ВОЗМОЖНОСТИ -->
+        <section class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-md border border-white/50">
+            <div class="text-center mb-6">
+                <span class="text-xs font-bold tracking-widest text-accent-secondary uppercase">Архитектура</span>
+                <h2 class="text-2xl font-bold mt-1 text-slate-900">Возможности интерфейса</h2>
+            </div>
