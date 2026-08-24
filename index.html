@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioLog — Сервис ежедневного мониторинга показателей здоровья</title>
     <style>
-        /* БАЗОВЫЕ НАСТРОЙКИ СТРАНИЦЫ */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -24,7 +23,6 @@
             margin: 0 auto;
         }
 
-        /* СТИЛЬ ВАШИХ РАМОЧЕК (КАРТОЧЕК) */
         .glass-box {
             background-color: rgba(255, 255, 255, 0.92);
             border: 1px solid rgba(255, 255, 255, 0.6);
@@ -34,7 +32,6 @@
             shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
-        /* СЕТКИ ДЛЯ КАРТОЧЕК (АДАПТИВНЫЕ) */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -47,7 +44,6 @@
             gap: 20px;
         }
 
-        /* СТИЛИ ТЕКСТА И АКЦЕНТЫ */
         h1 {
             font-size: 1.8rem;
             font-weight: 800;
@@ -88,7 +84,6 @@
             margin-bottom: 5px;
         }
 
-        /* ВНУТРЕННИЕ МИНИ-КАРТОЧКИ */
         .sub-card {
             background-color: #f7fafc;
             border: 1px solid #e2e8f0;
@@ -108,7 +103,6 @@
             box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
 
-        /* КНОПКИ С ВАШИМИ ЦВЕТАМИ */
         .btn-primary {
             background-color: #DA5D35;
             color: #ffffff;
@@ -146,7 +140,6 @@
             flex-wrap: wrap;
         }
 
-        /* НАВИГАЦИЯ И ПОДВАЛ */
         .nav-bar {
             display: flex;
             justify-content: space-between;
@@ -187,7 +180,6 @@
         }
         .footer-links a:hover { text-decoration: underline; }
 
-        /* ОСОБАЯ РАМОЧКА ДЛЯ АНКЕТЫ */
         .survey-box {
             border: 2px solid #FF7070;
         }
@@ -204,7 +196,6 @@
             margin: 0 auto 15px auto;
         }
 
-        /* ДЛЯ ИЗОБРАЖЕНИЯ И ЗАГЛУШКИ */
         .img-container {
             background-color: #f7fafc;
             padding: 12px;
@@ -234,7 +225,6 @@
 
     <div class="container">
 
-        <!-- 1. ПЕРВЫЙ ЭКРАН -->
         <header class="glass-box">
             <div class="nav-bar">
                 <span class="nav-logo">BioLog</span>
@@ -261,7 +251,6 @@
             </div>
         </header>
 
-        <!-- 2. О ПРОЕКТЕ -->
         <section id="about" class="glass-box text-center">
             <span class="uppercase-tag">Концепция</span>
             <h2>Что такое BioLog?</h2>
@@ -269,7 +258,6 @@
             <p>Продукт ориентирован на людей старше 35 лет или находящихся в группе риска (наследственность, избыточный вес, курение), а также на их близких, помогающих удаленно координировать процесс лечения.</p>
         </section>
 
-        <!-- 3. ПРОБЛЕМА -->
         <section class="glass-box">
             <div class="text-center" style="margin-bottom: 20px;">
                 <span class="uppercase-tag" style="color:#FF7070;">Реальные боли</span>
@@ -295,7 +283,6 @@
             </div>
         </section>
 
-        <!-- 4. РЕШЕНИЕ И ЦЕННОСТЬ -->
         <section class="glass-box">
             <div class="text-center" style="margin-bottom: 20px;">
                 <span class="uppercase-tag">Решение</span>
@@ -329,7 +316,6 @@
             </div>
         </section>
 
-        <!-- 5. ДЛЯ КОГО ПРОЕКТ -->
         <section class="glass-box">
             <div class="text-center" style="margin-bottom: 20px;">
                 <span class="uppercase-tag">Целевая аудитория</span>
@@ -352,7 +338,6 @@
             </div>
         </section>
 
-        <!-- 6. КЛЮЧЕВЫЕ ВОЗМОЖНОСТИ -->
         <section class="glass-box">
             <div class="text-center" style="margin-bottom: 20px;">
                 <span class="uppercase-tag">Архитектура</span>
@@ -391,7 +376,6 @@
             </div>
         </section>
 
-        <!-- 7. БЛОК АНКЕТЫ / АНКЕТИРОВАНИЯ -->
         <section id="survey" class="glass-box survey-box text-center">
             <div class="survey-icon">📊</div>
             <h2>Помогите нам проверить гипотезы</h2>
@@ -406,7 +390,6 @@
             </div>
         </section>
 
-        <!-- 8. КОНТАКТЫ / ФИНАЛЬНЫЙ ЭКРАН -->
         <footer>
             <h3 style="color: #FF7070; margin-bottom: 5px; font-size: 1.3rem;">BioLog</h3>
             <p style="font-size: 0.8rem; max-width: 400px; margin: 0 auto 20px auto;">Онлайн-контроль и автоматизация рутины для стабильности вашего лечения и спокойствия близких.</p>
